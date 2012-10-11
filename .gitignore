@@ -40,3 +40,4 @@ obj/
 *[Rr]elease*/
 Ankh.NoLoad
 [Bb]uild/
+*.data

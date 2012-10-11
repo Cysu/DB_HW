@@ -1,3 +1,5 @@
+#include <cstdio>
+#include <cstring>
 #include <ctime>
 #include "FZ_indexer.h"
 
@@ -13,8 +15,8 @@
 	#define REC_TIME_END(tc, t)
 #endif
 
-// #define CHECK_JACCARD
-#define CHECK_ED
+#define CHECK_JACCARD
+// #define CHECK_ED
 
 int main() {
 

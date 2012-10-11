@@ -1,3 +1,5 @@
+#include <cstdio>
+#include <cstring>
 #include "FZ_indexer.h"
 
 #define MAX(a, b) ((a) > (b) ? (a) : (b))
@@ -325,7 +327,6 @@ bool FZ_Indexer::CreateIndex(const char * dataFilename, uint qgram, const char *
             indices[sub].push_back(i);
         }
     }
-    fclose(fin);
 #endif
 
     return SUCCESS;
