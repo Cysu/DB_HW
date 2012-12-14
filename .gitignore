@@ -41,3 +41,5 @@ obj/
 Ankh.NoLoad
 [Bb]uild/
 *.data
+*.json
+*.pyc

@@ -1,0 +1,88 @@
+html, body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.clear_float
+{
+    clear: both;
+}
+
+#banner
+{
+    height: 7%;
+    background: -webkit-linear-gradient(top, #666, #333);
+}
+
+#logo
+{
+    color: white;
+    float: left;
+    font: bold 20pt Arial;
+    margin: 12px 0px 0px 30px;
+}
+
+#search_bar
+{
+    width: 800px;
+    height: 50%;
+    float: left;
+    font: 15pt Arial;
+    margin: 10px 0px 0px 54px;
+}
+
+#search_results
+{
+    width: 23%;
+    height: 93%;
+    float: left;
+    overflow: auto;
+}
+
+#map_canvas
+{
+    width: 77%;
+    height: 93%;
+}
+
+#time_show
+{
+    font: 10pt Arial;
+    color: #666;
+    padding: 10px 0px 10px 20px;
+    background-color: #eee;
+}
+
+.result_item
+{
+    font-family: Arial;
+    margin: 0;
+    padding: 20px;
+}
+
+.result_item:hover
+{
+    cursor: pointer;
+    background-color: #eee;
+}
+
+.result_item > .name
+{
+    font: bold 16pt Arial;
+    color: #25c;
+}
+
+.result_item > .latlng
+{
+    font: 10pt Consolas;
+    color: #093;
+}
+
+.result_item > .addr
+{
+    font: 11pt Arial;
+    color: black;
+}
