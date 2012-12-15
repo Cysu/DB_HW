@@ -18,31 +18,27 @@ class searcher:
 
         qstr = qstr.lower();
 
-        poi = []
         dist = []
         count = 0
 
-        for location in self.db:
-            if location['name'].lower().startswith(qstr):
-                poi.append(location)
-
+        for loc in self.db:
+            if loc['name'].lower().startswith(qstr):
                 # record the distance
-                lat = float(location['latlng'][0])
-                lng = float(location['latlng'][1])
+                lat = float(loc['latlng'][0])
+                lng = float(loc['latlng'][1])
                 d = (lat-center_lat)**2 + (lng-center_lng)**2
-                dist.append([d, count])
+                dist.append((d, count))
+            count += 1
 
-                count += 1
-
-        print 'server: result length %d' % len(poi)
+        print 'server: result length %d' % len(dist)
 
         # Trim the most nearest 10 results
         dist.sort()
 
-        n_filter = 5;
+        n_filter = 10;
         ret = []
         for i in range(0, min(n_filter, len(dist))):
-            ret.append(poi[dist[i][1]]);
+            ret.append(self.db[dist[i][1]]);
 
         t1 = time.clock()
 

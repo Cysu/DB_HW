@@ -1,5 +1,6 @@
 from backend.bottle import route, run, request, static_file, get, post
-from backend.naive import searcher
+# from backend.naive import searcher
+from backend.triebased import searcher
 
 handler = searcher()
 

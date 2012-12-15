@@ -1,0 +1,9 @@
+网站的后台采用了Bottlepy去响应http请求，每次查询，前端会发送ajax请求到
+"search?q=USER_TYPE_STRING&lat=CENTER_LAT&lng=CENTER_LNG"
+
+后台采取了Triebased的方法，对每个地点的name做了索引，每次查询，从Trie树中找出对应的地点集，
+并用地理位置进行筛选出离中心点最近的10个地点。
+
+运行方法：
+python dispatch.py
+在浏览器输入http://localhost:8080即可

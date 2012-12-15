@@ -50,6 +50,9 @@ $(document).ready(function() {
         url += '&lng=' + map.getCenter().lng();
 
         $.getJSON(url, function(response) {
+            map.clearMarkers();
+            $("#search_results").html('');
+            
             var time = response['time'];
             var data = response['result'];
 
