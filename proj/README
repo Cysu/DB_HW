@@ -7,3 +7,6 @@
 运行方法：
 python dispatch.py
 在浏览器输入http://localhost:8080即可
+
+可以改进的地方：
+之后可以首先利用地理位置找最近邻，这块其实有一个很方便的C++的KdTree的实现（Approximate Nearest Neighbor）。但是时间有限，我没有找到太好的方法可以用python调用C++/lib/so，之后可以改进。
